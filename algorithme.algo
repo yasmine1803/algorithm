@@ -1,0 +1,29 @@
+ALGORITHM checkpoint
+/* declaration */
+VAR
+    long:INTEGER:=0
+    mot:INTEGER:=1
+    voy:INTEGER:=0
+    ch:STRING
+BEGIN
+    /* input */
+    write("write a sentence ending with a periodt: ")
+    read(ch)
+    REPEAT
+    /* number of vowels */
+        IF (ch[long]=="a" OR ch[long]=="e" OR ch[long]=="i" OR ch[long]=="u" OR ch[long]=="o" OR ch[long]=="y") THEN
+            voy=voy+1
+        END_IF
+    /* number of words */
+        IF (ch[i]==" ") THEN
+            mot=mot+1
+        END_IF
+
+    /* number of characters */
+        long=long+1
+    UNTIL (ch[long]==".")
+    /* result */
+    write("number of characters is: ",long+2)
+    write("number of a words is: ",mot)
+    write("number of vowels is: ", voy)
+END
